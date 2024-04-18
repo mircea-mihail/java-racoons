@@ -9,9 +9,9 @@ public class Token
     @Override
     public String toString() {
         return "Token{" +
-                "Name='" + Name + '\'' +
-                ", Description='" + Description + '\'' +
-                '}';
+                "\n\tName='" + Name + '\'' +
+                "\n\tDescription='" + Description + '\'' +
+                "\n}";
     }
     public String getName() {
         return Name;

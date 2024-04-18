@@ -14,10 +14,10 @@ public class StashableCard extends Card
     @Override
     public String toString() {
         return "StashableCard{" + super.toString() +
-                "FirstPlacePoints=" + FirstPlacePoints +
-                ", SecondPlacePoints=" + SecondPlacePoints +
-                ", ThirdPlacePoints=" + ThirdPlacePoints +
-                '}';
+                "\n\tFirstPlacePoints=" + FirstPlacePoints +
+                "\n\tSecondPlacePoints=" + SecondPlacePoints +
+                "\n\tThirdPlacePoints=" + ThirdPlacePoints +
+                "\n}";
     }
 
     public int getFirstPlacePoints() {

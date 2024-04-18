@@ -26,10 +26,10 @@ public class Card implements Cloneable
     @Override
     public String toString() {
         return "Card{" +
-                "Title='" + Title + '\'' +
-                ", CardsInDeck=" + CardsInDeck +
-                ", Description='" + Description + '\'' +
-                '}';
+                "\n\tTitle='" + Title + '\'' +
+                "\n\tCardsInDeck=" + CardsInDeck +
+                "\n\tDescription='" + Description + '\'' +
+                "\n}";
     }
 
     public String getTitle() {
