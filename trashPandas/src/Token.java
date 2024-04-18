@@ -2,6 +2,7 @@ public class Token
 {
     private final String Name;
     private final String Description;
+
     public Token(String name, String description) {
         Name = name;
         Description = description;

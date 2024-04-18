@@ -6,7 +6,7 @@
 //  * TokenCollection
 //  * Token
 //  * Die
-//  Deck
+//  * Deck
 //  DiscardPile
 
 import javax.print.attribute.standard.MediaSize;
@@ -35,7 +35,11 @@ public class Main {
 
         System.out.println("resetting the token pile");
         tokens.reset();
-        System.out.println(tokens.toString());;
+        System.out.println(tokens.toString());
 
+        Deck myDeck = new Deck();
+        System.out.println(myDeck.DrawCard().getTitle());
+        System.out.println(myDeck.DrawCard().getTitle());
+        System.out.println(myDeck.DrawCard().getTitle());
     }
 }

@@ -1,8 +1,9 @@
 public class StashableCard extends Card
 {
-    private int FirstPlacePoints;
-    private int SecondPlacePoints;
-    private int ThirdPlacePoints;
+    private final int FirstPlacePoints;
+    private final int SecondPlacePoints;
+    private final int ThirdPlacePoints;
+
     public StashableCard(String title, int cardsInDeck, String description, int firstPlacePoints, int secondPlacePoints, int thirdPlacePoints) {
         super(title, cardsInDeck, description);
 

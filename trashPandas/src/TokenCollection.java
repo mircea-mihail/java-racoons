@@ -3,7 +3,7 @@ import java.util.List;
 
 public class TokenCollection
 {
-    List<Token> TokenList;
+    private List<Token> TokenList;
     public void InitTokenList()
     {
         TokenList.add(new Token("Double Stash", "Stash up to two stashable cards in your stash pile."));
@@ -30,18 +30,12 @@ public class TokenCollection
     public void reset()
     {
         TokenList.clear();
-
-        TokenList.add(new Token("Double Stash", "Stash up to two stashable cards in your stash pile."));
-        TokenList.add(new Token("Double Draw", "Draw up to two cards from the deck in play."));
-        TokenList.add(new Token("Stash Or Draw", "Choose to either Stash a card or Draw a card."));
-        TokenList.add(new Token("Steal", "Steal a random card from any player."));
-        TokenList.add(new Token("Recycle", "Exchange this token for a token that was not previously taken."));
-        TokenList.add(new Token("Free Roll", "Congrats, this does nothing."));
+        InitTokenList();
     }
 
     public TokenCollection()
     {
-        TokenList= new LinkedList<Token>();
+        TokenList = new LinkedList<Token>();
         InitTokenList();
     }
 

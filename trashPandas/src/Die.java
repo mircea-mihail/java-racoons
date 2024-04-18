@@ -12,6 +12,7 @@ public class Die
         Faces = new String[]{"Double Stash", "Double Draw", "Stash Or Draw", "Steal", "Recycle", "Free Roll"};
         NumberOfFaces = 6;
     }
+
     public String Roll()
     {
         Random random = new Random();

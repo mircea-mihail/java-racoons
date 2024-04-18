@@ -1,8 +1,8 @@
 public class Card implements Cloneable
 {
-    private final String Title;
-    private final int CardsInDeck;
-    private final String Description;
+    protected final String Title;
+    protected final int CardsInDeck;
+    protected final String Description;
     public Card(String title, int cardsInDeck, String description) {
         Title = title;
         CardsInDeck = cardsInDeck;
