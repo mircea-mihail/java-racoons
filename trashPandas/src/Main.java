@@ -7,10 +7,11 @@
 //  * Token
 //  * Die
 //  * Deck
-//  DiscardPile
+//  * DiscardPile
 
 import javax.print.attribute.standard.MediaSize;
 import java.sql.SQLOutput;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,5 +42,8 @@ public class Main {
         System.out.println(myDeck.DrawCard().getTitle());
         System.out.println(myDeck.DrawCard().getTitle());
         System.out.println(myDeck.DrawCard().getTitle());
+
+        Random random = new Random();
+        System.out.println(random.nextInt(1));
     }
 }
