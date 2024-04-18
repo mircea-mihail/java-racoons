@@ -1,12 +1,18 @@
-public class Card implements Cloneable
+public class Card implements Cloneable, Comparable<Card>
 {
     protected final String Title;
     protected final int CardsInDeck;
     protected final String Description;
+
     public Card(String title, int cardsInDeck, String description) {
         Title = title;
         CardsInDeck = cardsInDeck;
         Description = description;
+    }
+    @Override
+    public int compareTo(Card other)
+    {
+        return this.Title.compareTo(other.Title);
     }
 
     @Override

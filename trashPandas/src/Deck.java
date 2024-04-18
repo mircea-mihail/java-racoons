@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Deck
 {
-    private List<Card> CardsDeck;
-    private final Card[] UniqueCards = {
+    private List<Card> cardsDeck;
+    private final Card[] uniqueCards = {
             new StashableCard("Shiny", 3, "Steal a stashed card from a player. (Put it in your hand.)", 3, 0, 0),
             new StashableCard("Yum Yum", 5, "Force a player to continue rolling.", 4, 2, 0),
             new StashableCard("Feesh", 7, "Take a card from the discard pile.", 5, 3, 1),
@@ -19,16 +19,16 @@ public class Deck
     };
     public Deck()
     {
-        CardsDeck = new ArrayList<Card>();
-        InitDeck();
+        cardsDeck = new ArrayList<Card>();
+        initDeck();
     }
-    private void InitDeck()
+    private void initDeck()
     {
-        for(Card card : UniqueCards)
+        for(Card card : uniqueCards)
         {
             for(int i = 0; i < card.getCardsInDeck(); i++)
             {
-                CardsDeck.add(card.clone());
+                cardsDeck.add(card.clone());
             }
         }
 
@@ -36,21 +36,25 @@ public class Deck
     }
     private void ResetDeck()
     {
-        CardsDeck.clear();
-        InitDeck();
+        cardsDeck.clear();
+        initDeck();
     }
     public void shuffleDeck()
     {
-        Collections.shuffle(CardsDeck);
+        Collections.shuffle(cardsDeck);
     }
 
-    public Card DrawCard()
+    public Card drawCard()
     {
-        System.out.println(CardsDeck.size());
-        if(CardsDeck.isEmpty())
+        if(cardsDeck.isEmpty())
         {
             return null;
         }
-        return CardsDeck.removeLast();
+        return cardsDeck.removeLast();
+    }
+
+    public boolean isEmpty()
+    {
+        return cardsDeck.isEmpty();
     }
 }

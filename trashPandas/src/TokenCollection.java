@@ -3,46 +3,46 @@ import java.util.List;
 
 public class TokenCollection
 {
-    private List<Token> TokenList;
-    public void InitTokenList()
+    private List<Token> tokenList;
+    public void initTokenList()
     {
-        TokenList.add(new Token("Double Stash", "Stash up to two stashable cards in your stash pile."));
-        TokenList.add(new Token("Double Draw", "Draw up to two cards from the deck in play."));
-        TokenList.add(new Token("Stash Or Draw", "Choose to either Stash a card or Draw a card."));
-        TokenList.add(new Token("Steal", "Steal a random card from any player."));
-        TokenList.add(new Token("Recycle", "Exchange this token for a token that was not previously taken."));
-        TokenList.add(new Token("Free Roll", "Congrats, this does nothing."));
+        tokenList.add(new Token("Double Stash", "Stash up to two stashable cards in your stash pile."));
+        tokenList.add(new Token("Double Draw", "Draw up to two cards from the deck in play."));
+        tokenList.add(new Token("Stash Or Draw", "Choose to either Stash a card or Draw a card."));
+        tokenList.add(new Token("Steal", "Steal a random card from any player."));
+        tokenList.add(new Token("Recycle", "Exchange this token for a token that was not previously taken."));
+        tokenList.add(new Token("Free Roll", "Congrats, this does nothing."));
     }
 
-    public boolean extractToken(String TokenName)
+    public Token extractToken(String TokenName)
     {
-        for(Token token : TokenList)
+        for(Token token : tokenList)
         {
             if(token.getName().equals(TokenName))
             {
-                TokenList.remove(token);
-                return true;
+                tokenList.remove(token);
+                return token;
             }
         }
-        return false;
+        return null;
     }
 
     public void reset()
     {
-        TokenList.clear();
-        InitTokenList();
+        tokenList.clear();
+        initTokenList();
     }
 
     public TokenCollection()
     {
-        TokenList = new LinkedList<Token>();
-        InitTokenList();
+        tokenList = new LinkedList<Token>();
+        initTokenList();
     }
 
     @Override
     public String toString() {
         StringBuilder outputText = new StringBuilder();
-        for(Token token : TokenList)
+        for(Token token : tokenList)
         {
             outputText.append(token.getName());
             outputText.append("\n");

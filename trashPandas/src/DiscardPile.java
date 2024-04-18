@@ -1,5 +1,6 @@
 import java.sql.SQLOutput;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -30,9 +31,27 @@ public class DiscardPile
     public void ShowPileElements()
     {
         int idx = 0;
+        List<Card> uniqueCardsToShow = new ArrayList<>();
+
         for(Card card : Pile)
         {
-            System.out.println(idx + ": " + card.getTitle());
+            boolean foundOne = false;
+            for(Card checkCard : uniqueCardsToShow)
+            {
+                if(checkCard.getTitle() == card.getTitle())
+                {
+                    foundOne = true;
+                }
+            }
+            if(!foundOne)
+            {
+                uniqueCardsToShow.add(card);
+            }
+        }
+        Collections.sort(uniqueCardsToShow);
+        for(Card card : uniqueCardsToShow)
+        {
+            System.out.println(card.getTitle());
         }
     }
 

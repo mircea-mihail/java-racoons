@@ -5,22 +5,22 @@ import java.util.Random;
 
 public class Die
 {
-    private String[] Faces;
-    private int NumberOfFaces;
-    private void InitFaces()
+    private String[] faces;
+    private int numberOfFaces;
+    private void initFaces()
     {
-        Faces = new String[]{"Double Stash", "Double Draw", "Stash Or Draw", "Steal", "Recycle", "Free Roll"};
-        NumberOfFaces = 6;
+        faces = TokenNamesService.getTokenNamesArray();
+        numberOfFaces = 6;
     }
 
-    public String Roll()
+    public String roll()
     {
         Random random = new Random();
-        int randomFace = random.nextInt(NumberOfFaces);
-        return Faces[randomFace];
+        int randomFace = random.nextInt(numberOfFaces);
+        return faces[randomFace];
     }
     public Die()
     {
-        InitFaces();
+        initFaces();
     }
 }
