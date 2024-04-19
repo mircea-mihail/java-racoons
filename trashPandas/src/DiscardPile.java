@@ -6,34 +6,34 @@ import java.util.Random;
 
 public class DiscardPile
 {
-    List<Card> Pile;
+    private List<Card> pile;
 
     public DiscardPile()
     {
-        Pile = new ArrayList<>();
+        pile = new ArrayList<>();
     }
-    public void AddCard(Card card)
+    public void addCard(Card card)
     {
-        Pile.addLast(card);
+        pile.addLast(card);
     }
     public Card GetRandomCard()
     {
-        if(Pile.isEmpty())
+        if(pile.isEmpty())
         {
             return null;
         }
 
         Random random = new Random();
-        int cardIdxToRemove = random.nextInt(Pile.size());
-        return Pile.remove(cardIdxToRemove);
+        int cardIdxToRemove = random.nextInt(pile.size());
+        return pile.remove(cardIdxToRemove);
     }
 
-    public void ShowPileElements()
+    public void showPileElements()
     {
         int idx = 0;
         List<Card> uniqueCardsToShow = new ArrayList<>();
 
-        for(Card card : Pile)
+        for(Card card : pile)
         {
             boolean foundOne = false;
             for(Card checkCard : uniqueCardsToShow)
@@ -55,24 +55,24 @@ public class DiscardPile
         }
     }
 
-    public int GetSize()
+    public int getSize()
     {
-        return Pile.size();
+        return pile.size();
     }
 
-    public Card GetCard(int idx)
+    public Card getCard(int idx)
     {
-        if(Pile.isEmpty())
+        if(pile.isEmpty())
         {
             System.out.println("Pile is empty");
             return null;
         }
-        if(idx >= Pile.size())
+        if(idx >= pile.size())
         {
-            idx = Pile.size() - 1;
+            idx = pile.size() - 1;
             System.out.println("Index out of bounds, returning last card");
         }
-        return Pile.remove(idx);
+        return pile.remove(idx);
     }
 
 }

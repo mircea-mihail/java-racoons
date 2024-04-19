@@ -1,33 +1,33 @@
 public class StashableCard extends Card
 {
-    private final int FirstPlacePoints;
-    private final int SecondPlacePoints;
-    private final int ThirdPlacePoints;
+    private final int firstPlacePoints;
+    private final int secondPlacePoints;
+    private final int thirdPlacePoints;
 
-    public StashableCard(String title, int cardsInDeck, String description, int firstPlacePoints, int secondPlacePoints, int thirdPlacePoints) {
+    public StashableCard(String title, int cardsInDeck, String description, int _firstPlacePoints, int _secondPlacePoints, int _thirdPlacePoints) {
         super(title, cardsInDeck, description);
 
-        FirstPlacePoints = firstPlacePoints;
-        SecondPlacePoints = secondPlacePoints;
-        ThirdPlacePoints = thirdPlacePoints;
+        firstPlacePoints = _firstPlacePoints;
+        secondPlacePoints = _secondPlacePoints;
+        thirdPlacePoints = _thirdPlacePoints;
     }
 
     @Override
     public String toString() {
         return "StashableCard{" + super.toString() +
-                "\n\tFirstPlacePoints=" + FirstPlacePoints +
-                "\n\tSecondPlacePoints=" + SecondPlacePoints +
-                "\n\tThirdPlacePoints=" + ThirdPlacePoints +
+                "\n\tfirstPlacePoints=" + firstPlacePoints +
+                "\n\tsecondPlacePoints=" + secondPlacePoints +
+                "\n\tthirdPlacePoints=" + thirdPlacePoints +
                 "\n}";
     }
 
     public int getFirstPlacePoints() {
-        return FirstPlacePoints;
+        return firstPlacePoints;
     }
     public int getSecondPlacePoints() {
-        return SecondPlacePoints;
+        return secondPlacePoints;
     }
     public int getThirdPlacePoints() {
-        return ThirdPlacePoints;
+        return thirdPlacePoints;
     }
 }

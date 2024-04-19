@@ -34,7 +34,7 @@ public class Deck
 
         shuffleDeck();
     }
-    private void ResetDeck()
+    public void resetDeck()
     {
         cardsDeck.clear();
         initDeck();

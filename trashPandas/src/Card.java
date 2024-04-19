@@ -1,18 +1,18 @@
 public class Card implements Cloneable, Comparable<Card>
 {
-    protected final String Title;
-    protected final int CardsInDeck;
-    protected final String Description;
+    protected final String title;
+    protected final int cardsInDeck;
+    protected final String description;
 
-    public Card(String title, int cardsInDeck, String description) {
-        Title = title;
-        CardsInDeck = cardsInDeck;
-        Description = description;
+    public Card(String _title, int _cardsInDeck, String _description) {
+        title = _title;
+        cardsInDeck = _cardsInDeck;
+        description = _description;
     }
     @Override
     public int compareTo(Card other)
     {
-        return this.Title.compareTo(other.Title);
+        return this.title.compareTo(other.title);
     }
 
     @Override
@@ -32,19 +32,19 @@ public class Card implements Cloneable, Comparable<Card>
     @Override
     public String toString() {
         return "Card{" +
-                "\n\tTitle='" + Title + '\'' +
-                "\n\tCardsInDeck=" + CardsInDeck +
-                "\n\tDescription='" + Description + '\'' +
+                "\n\ttitle='" + title + '\'' +
+                "\n\tcardsInDeck=" + cardsInDeck +
+                "\n\tdescription='" + description + '\'' +
                 "\n}";
     }
 
     public String getTitle() {
-        return Title;
+        return title;
     }
     public int getCardsInDeck() {
-        return CardsInDeck;
+        return cardsInDeck;
     }
     public String getDescription() {
-        return Description;
+        return description;
     }
 }

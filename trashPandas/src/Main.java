@@ -24,9 +24,9 @@ public class Main {
 
         for(int i = 0; i < 10; i++)
         {
-            testDiscardPile.AddCard(testDeck.drawCard());
+            testDiscardPile.addCard(testDeck.drawCard());
         }
-        testDiscardPile.ShowPileElements();
+        testDiscardPile.showPileElements();
         // this functionality comes in handy when a player is able to draw any card
         // from the discard pile and this makes it easier for them to just get the card
         // with the appropriate title (the object is not important, only the behaviour of the card)
